@@ -1,0 +1,23 @@
+@import "../common/style/breakpoints";
+
+.error {
+  color: red;
+  border: 2px dotted red;
+  width: 480px;
+  margin: auto;
+}
+
+.input {
+  margin: 15px;
+  // width: 100px;
+  padding: 15px;
+ 
+
+  @media screen and (min-width: $md) {
+    width: 30%;
+  }
+}
+
+.invalid {
+  border: 1px solid red;
+}
