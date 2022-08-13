@@ -29,7 +29,7 @@ const LoginPage = () => {
             <InputInLabel name="password" type="password" placeholder="Password"/>
            
 
-            <input type="submit" value="LOGIN" className={styles.login} />
+            <input type="submit" value="LOGIN" className={styles.btn_login} />
         
           </Form>
         );

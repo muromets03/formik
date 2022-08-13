@@ -11,9 +11,10 @@ export const SCHEMA_PASSWORD = Yup.string('Must be string').matches(/^(?=.*?[A-Z
 export const SCHEMA_SIGN_UP = Yup.object({
   fname: SCHEMA_NAME,
   lname: SCHEMA_NAME,
+  dname: SCHEMA_NAME,
   email: SCHEMA_EMAIL,
   password: SCHEMA_PASSWORD ,
-  age:Yup.number('Must be number').min(18, 'Must be more 18').max(80, 'Must be less 18').required('Must be required')
+  // age:Yup.number('Must be number').min(18, 'Must be more 18').max(80, 'Must be less 18').required('Must be required')
 })
 
 export const SCHEMA_SIGN_IN =  Yup.object({

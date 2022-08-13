@@ -5,6 +5,7 @@
   border: 2px dotted red;
   width: 480px;
   margin: auto;
+  text-align: center;
 }
 
 .input {
@@ -14,10 +15,11 @@
  
 
   @media screen and (min-width: $md) {
-    width: 30%;
+    width: 40%;
   }
 }
 
 .invalid {
   border: 1px solid red;
+  
 }

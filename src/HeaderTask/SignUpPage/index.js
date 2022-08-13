@@ -1,14 +1,16 @@
 import { Form, Formik } from 'formik';
 import React from 'react';
 import InputInLabel from '../../InputInLabel';
-import { SCHEMA_LOGIN } from '../../utils/validateSchemas';
+import {  SCHEMA_SIGN_UP } from '../../utils/validateSchemas';
 import styles from "../HeaderTask.module.scss";
 import { PropTypes } from 'prop-types';
 
 
 const initialValues = {
-    login: "",
+    first_name: "",
+    last_name:"",
     password: "",
+
   };
 
 const SignUpPage = () => {
@@ -19,17 +21,17 @@ const SignUpPage = () => {
                 <Formik
       initialValues={initialValues}
   
-      validationSchema={SCHEMA_LOGIN}
+      validationSchema={SCHEMA_SIGN_UP} 
     >
       {(formikProps) => {
         console.log(formikProps);
 
         return (
           <Form className={styles.form} >
-            <InputInLabel  name="login" type="text" placeholder="First name" />
-            <InputInLabel name="login" type="text" placeholder="Last Name" />
-            <InputInLabel name="login" type="text" placeholder="Display Name" />
-            <InputInLabel name="login" type="text" placeholder="Email address" />
+            <InputInLabel  name="fname" type="text" placeholder="First name" />
+            <InputInLabel name="lname" type="text" placeholder="Last Name" />
+            <InputInLabel name="dname" type="text" placeholder="Display Name" />
+            <InputInLabel name="email" type="text" placeholder="Email address" />
            
             <InputInLabel name="password" type="password" placeholder="password"/>
             <InputInLabel name="passwordconfirm" type="password" placeholder="password confirm"/>
