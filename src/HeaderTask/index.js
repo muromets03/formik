@@ -13,9 +13,7 @@ const HeaderTask = () => {
 
     <div className={styles.header}>
         
-      <Link to="/">
-        
-        <img src={logo} alt="logo" />
+      <Link to="/"><img src={logo} alt="logo" />
       </Link>
       {pathname === "/login" ? (<Link className={styles.btn} to="/signup">Sign Up </Link> ) : (<Link className={styles.btn} to="/login">Login </Link> )}
       

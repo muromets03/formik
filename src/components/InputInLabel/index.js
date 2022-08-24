@@ -1,12 +1,12 @@
 import { ErrorMessage, Field } from "formik";
 import React from "react";
 import cx from "classnames";
-import styles from "./InputLabel.module.scss";
+import styles from "../InputInLabel/InputLabel.module.scss";
 
 const InputInLabel = (props) => {
   const { name, ...restprops } = props;
   return (
-    <label>
+    <label className={styles.label}>
    
       
       <Field name={name} type="text" placeholder={name} {...restprops}>

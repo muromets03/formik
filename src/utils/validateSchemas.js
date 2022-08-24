@@ -14,22 +14,12 @@ export const SCHEMA_SIGN_UP = Yup.object({
   dname: SCHEMA_NAME,
   email: SCHEMA_EMAIL,
   password: SCHEMA_PASSWORD ,
-  // age:Yup.number('Must be number').min(18, 'Must be more 18').max(80, 'Must be less 18').required('Must be required')
+ passwordconfirm: Yup.string().oneOf([Yup.ref("password")], 'Password not equal')
 })
 
-export const SCHEMA_SIGN_IN =  Yup.object({
-  email:SCHEMA_EMAIL,
-  password:SCHEMA_PASSWORD,
-  remembe: Yup.boolean().required('Must be true or false')
-})
-
-export const SCHEMA_CONTACTS =  Yup.object({
-  fname: SCHEMA_NAME,
-  email:SCHEMA_EMAIL
-})
 
 export const SCHEMA_LOGIN = Yup.object({
   login: Yup.string('Must be string').matches(/^\w{4,16}$/,'Invalid login').required('Must be required'),
   password: SCHEMA_PASSWORD,
-  passwordconfirm: Yup.string().oneOf([Yup.ref("password")], 'Password not equal')
+  
 })

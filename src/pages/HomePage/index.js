@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../HeaderTask.module.scss";
+import styles from "../../HeaderTask/HeaderTask.module.scss";
 
 const HomePage = () => {
   return (

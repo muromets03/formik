@@ -1,9 +1,10 @@
 import React from 'react';
-import { Form, Formik } from "formik";
+
 import { SCHEMA_LOGIN } from "../../utils/validateSchemas";
-import styles from "../HeaderTask.module.scss";
-import InputInLabel from "../../InputInLabel";
+import styles from "../../HeaderTask/HeaderTask.module.scss";
+import InputInLabel from "../../components/InputInLabel/";
 import { PropTypes } from 'prop-types';
+import { Form, Formik } from 'formik';
 
 const initialValues = {
     login: "",
@@ -17,7 +18,7 @@ const LoginPage = () => {
             <h1>LOGIN TO YOUR ACCOUNT</h1>
             <Formik
       initialValues={initialValues}
-    //   onSubmit={props.onSubmit}
+
       validationSchema={SCHEMA_LOGIN}
     >
       {(formikProps) => {

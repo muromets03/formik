@@ -4,9 +4,10 @@ import React from "react";
 import HeaderTask from "../src/HeaderTask";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "../src/HeaderTask/HomePage";
-import LoginPage from "../src/HeaderTask/LoginPage";
-import SignUpPage from "../src/HeaderTask/SignUpPage";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
+
 
 
 
